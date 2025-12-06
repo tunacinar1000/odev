@@ -1,0 +1,24 @@
+import java.util.Scanner;
+
+public class OrtalamaHesaplama {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Sınav 1 notunu girin: ");
+        double sinav1 = scanner.nextDouble();
+
+        System.out.print("Sınav 2 notunu girin: ");
+        double sinav2 = scanner.nextDouble();
+
+        double ortalama = sinav1 * 0.4 + sinav2 * 0.6;
+
+        if (ortalama >= 75) {
+            System.out.println("Geçtin ");
+       
+        } else {
+            System.out.println("Kaldın");
+        }
+
+        scanner.close();
+    }
+}
