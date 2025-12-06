@@ -1,0 +1,27 @@
+import java.util.Scanner;
+
+public class DörtIşlem {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Birinci sayıyı gir");
+        double sayi1 = scanner.nextDouble();
+
+        System.out.print("İkinci sayıyı gir");
+        double sayi2 = scanner.nextDouble();
+
+        double toplam = sayi1 + sayi2;
+        System.out.println("Toplam: " + toplam);
+
+        double fark = sayi1 - sayi2;
+        System.out.println("Fark: " + fark);
+
+        double carpim = sayi1 * sayi2;
+        System.out.println("Çarpım: " + carpim);
+
+        double bolum = sayi1 / sayi2;
+        System.out.println("Bölüm: " + bolum);
+
+        scanner.close();
+    }
+}
