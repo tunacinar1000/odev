@@ -1,0 +1,62 @@
+public class Main {
+
+    static class Ogretmen {
+        private String ad;
+
+        public Ogretmen(String ad) {
+            this.ad = ad;
+        }
+
+        public void println() {
+            System.out.println("Öğretmen: " + ad);
+        }
+    }
+
+    static class Odev {
+        private String baslik;
+
+        public Odev(String baslik) {
+            this.baslik = baslik;
+        }
+
+        public void println() {
+            System.out.println("Ödev: " + baslik);
+        }
+    }
+
+    static class Ders {
+        private Ogretmen ogretmen;
+        private Odev odev;
+        private double yaziliNotu;
+        private double sozluNotu;
+
+        public Ders(Ogretmen ogretmen, Odev odev) {
+            this.ogretmen = ogretmen;
+            this.odev = odev;
+        }
+
+        public void notlar(double yaziliNotu, double sozluNotu) {
+            this.yaziliNotu = yaziliNotu;
+            this.sozluNotu = sozluNotu;
+        }
+
+        public void println() {
+            System.out.println("===== Ders Bilgileri =====");
+            ogretmen.println();
+            odev.println();
+            System.out.println("Yazılı Notu: " + yaziliNotu);
+            System.out.println("Sözlü Notu: " + sozluNotu);
+        }
+    }
+
+    public static void main(String[] args) {
+
+        Ogretmen ogretmen = new Ogretmen("Enis");
+        Odev odev = new Odev("100 Soruluk Ödev");
+
+        Ders ders = new Ders(ogretmen, odev);
+        ders.notlar(85, 100);
+
+        ders.println();
+    }
+}
