@@ -1,0 +1,11 @@
+public class Main {
+    public static void main(String[] args) {
+    f(4);
+    f(8);
+}
+
+static void f(int x){
+    int result = (x*5);
+    System.out.println(result);
+    }
+}
