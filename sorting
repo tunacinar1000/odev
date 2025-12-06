@@ -11,9 +11,22 @@ public class RandomArraySort {
             sayilar[i] = rnd.nextInt(100);
         }
 
-        Arrays.sort(sayilar);
+        
+        for (int i = 0; i < sayilar.length - 1; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < sayilar.length; j++) {
+                if (sayilar[j] < sayilar[minIndex]) {
+                    minIndex = j;
+                }
+            }
 
-        System.out.println("\nSıralanmış dizi:");
+           
+            int temp = sayilar[i];
+            sayilar[i] = sayilar[minIndex];
+            sayilar[minIndex] = temp;
+        }
+
+        System.out.println("sıralanmış hal:");
         System.out.println(Arrays.toString(sayilar));
     }
 }
